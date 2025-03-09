@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaHome, FaMap, FaUser, FaCog } from 'react-icons/fa'; 
+import { FaClone, FaUser, FaCog } from 'react-icons/fa'; 
 
 const FooterContainer = styled.footer`
   position: fixed;
@@ -31,18 +31,19 @@ const IconLink = styled(Link)`
 export default function Footer() {
   return (
     <FooterContainer>
-      <IconLink to="/">
-        <FaHome />
-      </IconLink>
-      <IconLink to="/map">
-        <FaMap />
-      </IconLink>
+
       <IconLink to="/account"> 
         <FaUser />
       </IconLink>
+
+      <IconLink to="/">
+        <FaClone />
+      </IconLink>
+
       <IconLink to="/settings">
         <FaCog />
       </IconLink>
+
     </FooterContainer>
   );
 }

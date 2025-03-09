@@ -55,18 +55,14 @@ export default function App() {
       <Container>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/map"
-            element={
+          <Route path="/account" element={
               <MapWrapper>
                 <Map onMarkerAdd={(marker) => setMarkers(p => [...p, marker])} />
                 <ButtonContainer>
                   <Button onClick={handleConfirm}>Подтвердить</Button>
                 </ButtonContainer>
               </MapWrapper>
-            }
-          />
-          <Route path="/account" element={<Account />} /> 
+            } /> 
           <Route path="/settings" element={<Settings />} /> 
         </Routes>
       </Container>
